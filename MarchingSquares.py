@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
 from fractions import gcd
-import PIL.ImageDraw as ImageDraw
 import PIL.Image as Image
+import PIL.ImageDraw as ImageDraw
 import math
 import random
 
@@ -14,7 +14,7 @@ class MSGenerator:
 		self.h = height + 1
 		
 		self.r = offset if isinstance(offset, int) or isinstance(offset, float) else random.randint(0, 100) + 1
-		self.s = scale if isinstance(scale, int) else int(scale) if isinstance(scale, float) else int(min(w,h) / (gcd(w,h) / 2))
+		self.s = scale if isinstance(scale, int) else int(scale) if isinstance(scale, float) else int(min(width,height) / (gcd(width,height) / 2))
 			
 		self.bgc = bgcolor
 		self.fgc = fgcolor
